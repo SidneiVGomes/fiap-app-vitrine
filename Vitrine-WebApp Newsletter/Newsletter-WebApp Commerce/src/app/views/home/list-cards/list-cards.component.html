@@ -1,9 +1,0 @@
-<div class="list-card" fxLayout="row wrap" fxLayoutAlign="start start">
-   <ng-container *ngFor="let newsletter of newslettersList | async">
-
-      <app-card [news]=newsletter (changedItem)="refreshListCards($event)" class="list-card-single" fxFlex="0 0 30%"
-         fxFlex.lt-md="0 1 50%" fxFlex.lt-sm="0 0 100%">
-      </app-card>
-
-   </ng-container>
-</div>
