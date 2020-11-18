@@ -1,4 +1,4 @@
-# VitrineNewsletter
+# Vitrine - Newsletter
 
 ### Finalidade
 Projeto Acadêmico
