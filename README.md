@@ -32,11 +32,10 @@ Tecnologias utilizadas:
 ## App Vitrine - Newsletter
 Este aplicativo será utilziado para nós +Vida nos conectarmos aos nossos usuários (usuários e comércios), através de notícias sobre o app e muito mais.
 
-O **APP Vitrine - Newsletter** é divido em duas partes:
+O **APP Vitrine - Newsletter** também é divido em duas partes:
 
-- Backend em NODE
-- Frontend em Angular
-- E armazenas os dados em um banco de dados noSQL (MongoDB).
+- Backend  - Contém os CRUDs para publicamos as notícias.
+- Frontend - WEB app para criação, consulta, alteração e exclusão das notícias.
 
 Tecnologias utilizadas:
 1. Javascript
