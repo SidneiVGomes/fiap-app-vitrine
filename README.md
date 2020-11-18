@@ -18,7 +18,7 @@ Através deste App o usuário poderá desfrutar de todas as ofertas e promoçõe
 ## App Vitrine - Newsletter
 Este aplicativo será utilziado para nós +Vida nos conectarmos aos nossos usuários (usuários e comércios), através de notícias sobre o app e muito mais.
 
-O APP Vitrine - Newsletter é divido em duas partes:
+O **APP Vitrine - Newsletter** é divido em duas partes:
 
 - Backend em NODE
 - Frontend em Angular
