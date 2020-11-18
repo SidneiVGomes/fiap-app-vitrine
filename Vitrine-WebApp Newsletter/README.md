@@ -12,4 +12,4 @@ O Vitrine é um APP nos conecta aos nossos clientes através de notícias sobre 
 Ele é composto por dois módulos:
 
 - **Backend** - Desenvolvido com NODE Express e MongoDB, disponibiliza os recursos necessários para o CRUD.
-- **Frontend**   - Desenvolvido em Angular, é a ferramenta onde os comércios irão publicar suas notícias.
+- **Frontend** - Webapp Desenvolvido em Angular, é a ferramenta onde iremos anuncias as últimas novidades.
