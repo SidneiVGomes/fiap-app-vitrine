@@ -26,10 +26,35 @@
 
 .home-toolbar-button-row {
   display: table-cell;
-  width: 60px;
+  width: 50px;
 }
 
 ::ng-deep .snackBar-custom-sucess {
   background-color: #1f8f00;
   color: white;
 }
+
+.home-toolbar-button{
+  width: 30px;
+  height: 30px;
+}
+
+.home-toolbar-button-icon{
+  width: 10px;
+  height: 10px;
+  margin-top: -25px;
+  margin-left: -12px;
+}
+
+.home-toolbar-username{
+  font-size: 0.6rem;
+  margin-top: -8px;
+  margin-bottom: 0;
+  margin-left: -10px;
+}
+
+.home-toolbar-button-group{
+  margin-top: 08px;
+  margin-bottom: 0px;
+}
+

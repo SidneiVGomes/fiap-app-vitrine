@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
-import { NewsLetter } from 'src/app/models/newsletter.model';
+import { NewsLetterModel } from 'src/app/models/newsletter.model';
 import { NewsletterService } from 'src/app/services/newsletter.service';
 
 @Component({
@@ -10,7 +10,7 @@ import { NewsletterService } from 'src/app/services/newsletter.service';
   styleUrls: ['./list-cards.component.css'],
 })
 export class ListCardsComponent implements OnInit {
-  newslettersList: Observable<NewsLetter[]>;
+  newslettersList: Observable<NewsLetterModel[]>;
 
   constructor(
     private _newsLetterService: NewsletterService,
@@ -32,7 +32,7 @@ export class ListCardsComponent implements OnInit {
   refreshListCards(_refresh: boolean) {
     if (_refresh) {
       this.ngOnInit();
-      this.router.navigateByUrl('/');
+      this.router.navigateByUrl('/home');
     }
   }
 }

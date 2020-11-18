@@ -1,7 +1,7 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
-import { NewsLetter } from 'src/app/models/newsletter.model';
+import { NewsLetterModel } from 'src/app/models/newsletter.model';
 import { PublishObserverService } from 'src/app/services/publish-observer.service';
 
 @Component({
@@ -10,7 +10,7 @@ import { PublishObserverService } from 'src/app/services/publish-observer.servic
   styleUrls: ['./form-publication.component.css'],
 })
 export class FormPublicationComponent implements OnInit {
-  newsletter: NewsLetter;
+  newsletter: NewsLetterModel;
 
   constructor(
     public _dialogRef: MatDialogRef<FormPublicationComponent>,
@@ -28,7 +28,7 @@ export class FormPublicationComponent implements OnInit {
   });
 
   ngOnInit(): void {
-    let newsLetter = new NewsLetter();
+    let newsLetter = new NewsLetterModel();
 
     if (this.data.newsletter == null) {
       this.data.newsletter = newsLetter;

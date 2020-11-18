@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
-import { NewsLetter } from '../models/newsletter.model';
+import { NewsLetterModel } from '../models/newsletter.model';
 
 @Injectable({
   providedIn: 'root'
@@ -12,7 +12,7 @@ export class PublishObserverService {
 
   constructor() { }
 
-  changePublish(_newsletter: NewsLetter){
+  changePublish(_newsletter: NewsLetterModel){
     this.newsletterSubject.next(_newsletter);
   }
 }

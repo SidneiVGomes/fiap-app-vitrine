@@ -1,7 +1,7 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { NewsLetter } from 'src/app/models/newsletter.model';
+import { NewsLetterModel } from 'src/app/models/newsletter.model';
 import { NewsletterService } from 'src/app/services/newsletter.service';
 import { PublishObserverService } from 'src/app/services/publish-observer.service';
 import { DialogComponent } from 'src/app/shared/dialog/dialog.component';
@@ -13,8 +13,8 @@ import { FormPublicationComponent } from '../form-publication/form-publication.c
   styleUrls: ['./card.component.css'],
 })
 export class CardComponent implements OnInit {
-  public newsletterInitial: NewsLetter;
-  private newsletterChanged: NewsLetter;
+  public newsletterInitial: NewsLetterModel;
+  private newsletterChanged: NewsLetterModel;
 
   constructor(
     private _newsletterService: NewsletterService,
@@ -31,13 +31,13 @@ export class CardComponent implements OnInit {
   }
 
   @Input()
-  set news(_newsletter: NewsLetter) {
+  set news(_newsletter: NewsLetterModel) {
     this.newsletterInitial = _newsletter;
   }
 
   @Output() changedItem = new EventEmitter<boolean>();
 
-  deleteCard(_newsletter: NewsLetter) {
+  deleteCard(_newsletter: NewsLetterModel) {
     // Popup para confirmação da exclusão.
     const dialogRef = this._dialog.open(DialogComponent, {
       data: { newsletter: _newsletter },
@@ -61,7 +61,7 @@ export class CardComponent implements OnInit {
     });
   }
 
-  openFormEditNewsletter(_newsletter: NewsLetter) {
+  openFormEditNewsletter(_newsletter: NewsLetterModel) {
     const dialogRef = this._dialog.open(FormPublicationComponent, {
       data: { newsletter: _newsletter },
       minWidth: '500px',

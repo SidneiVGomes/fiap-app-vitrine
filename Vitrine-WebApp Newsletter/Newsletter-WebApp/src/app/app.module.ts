@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -24,6 +24,8 @@ import { ListCardsComponent } from './views/home/list-cards/list-cards.component
 import { CardComponent } from './views/home/card/card.component';
 import { DialogComponent } from './shared/dialog/dialog.component';
 import { FormPublicationComponent } from './views/home/form-publication/form-publication.component';
+import { LogInComponent } from './views/log-in/log-in.component';
+import { RegisterComponent } from './views/register/register.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,9 @@ import { FormPublicationComponent } from './views/home/form-publication/form-pub
     ListCardsComponent,
     CardComponent,
     FormPublicationComponent,
-    DialogComponent
+    DialogComponent,
+    LogInComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
@@ -55,6 +59,7 @@ import { FormPublicationComponent } from './views/home/form-publication/form-pub
     NgxMasonryModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { }

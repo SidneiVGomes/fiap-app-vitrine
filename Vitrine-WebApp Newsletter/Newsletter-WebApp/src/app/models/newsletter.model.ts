@@ -1,4 +1,4 @@
-export class NewsLetter {
+export class NewsLetterModel {
   _id: string;
   establishmentName: string;
   establishmentCategory: string;

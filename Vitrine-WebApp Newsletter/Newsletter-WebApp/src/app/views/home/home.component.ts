@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { NewsLetter } from 'src/app/models/newsletter.model';
+import { NewsLetterModel } from 'src/app/models/newsletter.model';
 import { NewsletterService } from 'src/app/services/newsletter.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { PublishObserverService } from 'src/app/services/publish-observer.service';
 import { FormPublicationComponent } from './form-publication/form-publication.component';
 import { Router } from '@angular/router';
+import { LoginModel } from 'src/app/models/Login.model';
 
 @Component({
   selector: 'app-home',
@@ -13,16 +14,17 @@ import { Router } from '@angular/router';
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements OnInit {
-  public newsletterChanged: NewsLetter;
+  public newsletterChanged: NewsLetterModel;
+  public loginModel: LoginModel;
 
   constructor(
     public _dialog: MatDialog,
     private _newsletterService: NewsletterService,
     private _snackBar: MatSnackBar,
     private _publishObserver: PublishObserverService,
-    private router: Router
+    private _router: Router
   ) {
-    this.router.routeReuseStrategy.shouldReuseRoute = () => {
+    this._router.routeReuseStrategy.shouldReuseRoute = () => {
       return false;
     };
   }
@@ -32,9 +34,12 @@ export class HomeComponent implements OnInit {
     this._publishObserver.newsletterObserver.subscribe(
       (publish) => (this.newsletterChanged = publish)
     );
+
+    this.loginModel = JSON.parse(sessionStorage.getItem('userActived'));
+    console.log("Home - " + this.loginModel.nome);
   }
 
-  openFormCreateNewsletter(_newsletter: NewsLetter): void {
+  openFormCreateNewsletter(_newsletter: NewsLetterModel): void {
     const dialogRef = this._dialog.open(FormPublicationComponent, {
       data: { newsletter: _newsletter },
       minWidth: '500px',
@@ -50,9 +55,14 @@ export class HomeComponent implements OnInit {
               panelClass: ['snackBar-custom-sucess'],
             });
 
-            this.router.navigateByUrl('/');
+            this._router.navigateByUrl('/home');
           });
       }
     });
+  }
+
+  exitApp(){
+    sessionStorage.clear();
+    this._router.navigate(['login']);
   }
 }

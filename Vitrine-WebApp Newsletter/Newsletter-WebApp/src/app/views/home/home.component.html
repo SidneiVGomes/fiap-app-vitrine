@@ -1,0 +1,34 @@
+<mat-toolbar class="home-toolbar">
+   <mat-toolbar-row>
+      <span class="home-toolbar-title">
+         <img src="assets/vitrine-logo.png" alt="Logo do APP">
+         Vitrine - Newsletters
+      </span>
+      <span class="home-toolbar-spacer"></span>
+      <div>
+         <div class="home-toolbar-button-group">
+            <div class="home-toolbar-button-row">
+               <button mat-mini-fab (click)="exitApp()" color="white" class="home-toolbar-button">
+                  <mat-icon class="home-toolbar-button-icon" aria-hidden="false"
+                     aria-label="Example user verified icon">
+                     exit_to_app
+                  </mat-icon>
+               </button>
+            </div>
+            <div class="home-toolbar-button-row">
+               <button mat-mini-fab (click)="openFormCreateNewsletter(null)" color="white" class="home-toolbar-button">
+                  <mat-icon class="home-toolbar-button-icon" aria-hidden="false"
+                     aria-label="Example user verified icon">
+                     add
+                  </mat-icon>
+               </button>
+            </div>
+         </div>
+         <div class="home-toolbar-username">
+            <span>{{loginModel.nome}}</span>
+         </div>
+      </div>
+   </mat-toolbar-row>
+</mat-toolbar>
+
+<app-list-cards></app-list-cards>
