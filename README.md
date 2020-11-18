@@ -2,7 +2,7 @@
 
 Projeto acadêmico explorando tecnologias Mobile, WEB, Backend, Bancos de Dados Relacionais e Não Relacionais.
 
-##App Vitrine
+## App Vitrine
 
 O Vitrine é um aplicativo que nasceu para aproximar pequenos comércios de seus clientes e vice-versa, aumentando o faturamento desses comércios e trazendo economia para os clientes.
 
@@ -20,7 +20,6 @@ Este aplicativo será utilziado para nós +Vida nos conectarmos aos nossos usuá
 
 O APP Vitrine - Newsletter é divido em duas partes:
 
-### Backend em NODE
-### Frontend em Angular
-
-E armazenas os dados em um banco de dados noSQL (MongoDB).
+- Backend em NODE
+- Frontend em Angular
+- E armazenas os dados em um banco de dados noSQL (MongoDB).
