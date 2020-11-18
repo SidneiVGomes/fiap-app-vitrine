@@ -58,3 +58,7 @@
 .mat-card-error-msg {
   text-align: center;
 }
+
+.text-danger-small {
+  font-size: 0.6rem;
+}

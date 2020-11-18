@@ -1,7 +1,6 @@
 export class NewsLetterModel {
   _id: string;
-  establishmentName: string;
-  establishmentCategory: string;
+  category: string;
   title: string;
   message: string;
 }

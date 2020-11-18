@@ -25,9 +25,17 @@
   font-size: 0.8rem;
 }
 
+.card-header-id{
+  font-size: 0.6rem;
+  margin-bottom: 0px;
+}
+
 .card-header-category-label{
   font-size: 0.8rem;
   font-weight: normal;
   margin-right: 5px;
+}
+
+.card-header-category{
   color: black;
 }

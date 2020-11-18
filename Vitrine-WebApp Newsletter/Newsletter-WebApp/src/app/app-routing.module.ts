@@ -6,7 +6,8 @@ import { LogInComponent } from './views/log-in/log-in.component';
 import { RegisterComponent } from './views/register/register.component';
 
 const routes: Routes = [
-  { path: '', pathMatch: 'full', redirectTo: 'login' },
+  // { path: '', pathMatch: 'full', redirectTo: 'login' },
+  { path: '', component: LogInComponent },
   { path: 'login', component: LogInComponent },
   { path: 'register', component: RegisterComponent },
 

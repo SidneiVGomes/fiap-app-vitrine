@@ -12,13 +12,12 @@ module.exports = {
     },
 
     async store(req, res) {
-        const { establishmentCategory, message, title, establishmentName } = req.body;
+        const { category, message, title } = req.body;
 
             const newsletter = await Newsletter.create({
-            establishmentCategory,
+            category,
             message,
-            title,
-            establishmentName
+            title
         })
 
         return res.json(newsletter);
@@ -39,13 +38,12 @@ module.exports = {
 
     async update(req, res) {
         const { id } = req.params;
-        const { establishmentName, establishmentCategory, message, title } = req.body;
+        const { category, message, title } = req.body;
 
         try {
             const newsletter = await Newsletter.findByIdAndUpdate({ _id: id }, req.body, { runValidators: true }).exec();
 
-            newsletter.establishmentName = establishmentName;
-            newsletter.establishmentCategory = establishmentCategory;
+            newsletter.category = category;
             newsletter.title = title;
             newsletter.message = message;
 

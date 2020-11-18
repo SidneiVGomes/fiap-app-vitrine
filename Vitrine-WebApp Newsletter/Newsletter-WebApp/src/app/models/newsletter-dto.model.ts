@@ -1,6 +1,5 @@
 export class NewsLetterDTO {
-  establishmentName: string;
-  establishmentCategory: string;
+  category: string;
   title: string;
   message: string;
 }

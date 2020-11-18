@@ -18,7 +18,7 @@
           <input matInput placeholder="Usuário" formControlName="userName">
           <small *ngIf="loginForm.get('userName').errors?.required"
                  class="text-danger d-block mt-2">
-            <!-- Informe seu usuário de acesso! -->
+            <span class="text-danger-small">Para teste: teste@email.com</span>
           </small>
         </mat-form-field>
 
@@ -26,7 +26,7 @@
           <input matInput placeholder="Senha" formControlName="senha">
           <small *ngIf="loginForm.get('senha').errors?.required"
                  class="text-danger d-block mt-2">
-            <!-- Informe sua senha! -->
+                 <span class="text-danger-small">Para teste: 123456</span>
           </small>
         </mat-form-field>
       </mat-card-content>

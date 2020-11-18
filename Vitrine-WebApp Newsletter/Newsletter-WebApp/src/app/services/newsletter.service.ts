@@ -33,10 +33,13 @@ export class NewsletterService {
   public putNewsletters(_newsLetter: NewsLetterModel): Observable<NewsLetterModel> {
     let newsletterDTO = new NewsLetterDTO();
 
-    newsletterDTO.establishmentName = _newsLetter.establishmentName;
-    newsletterDTO.establishmentCategory = _newsLetter.establishmentCategory;
+    newsletterDTO.category = _newsLetter.category;
     newsletterDTO.title = _newsLetter.title;
     newsletterDTO.message = _newsLetter.message;
+
+    console.log(_newsLetter);
+    console.log(newsletterDTO);
+
 
     return this._httpClient.put<NewsLetterModel>(
       urlAPI + _newsLetter._id,

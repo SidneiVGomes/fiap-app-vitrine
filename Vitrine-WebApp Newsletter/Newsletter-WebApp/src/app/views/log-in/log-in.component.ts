@@ -31,8 +31,8 @@ export class LogInComponent implements OnInit {
 
     // Cria o Form para entrada dos dados para conexão
     this.loginForm = this._formBuilder.group({
-      userName: ['', Validators.required],
-      senha: ['', Validators.required]
+      userName: ['teste@email.com', Validators.required],
+      senha: ['123456', Validators.required]
     }); 
   }
 

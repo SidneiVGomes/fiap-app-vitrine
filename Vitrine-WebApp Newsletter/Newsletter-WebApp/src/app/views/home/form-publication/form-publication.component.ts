@@ -21,8 +21,7 @@ export class FormPublicationComponent implements OnInit {
 
   public newsletterForm = this._formBuilder.group({
     _id: [''],
-    establishmentName: ['', Validators.required],
-    establishmentCategory: ['', Validators.required],
+    category: ['', Validators.required],
     title: ['', Validators.required],
     message: ['', Validators.required],
   });
@@ -37,8 +36,7 @@ export class FormPublicationComponent implements OnInit {
     try {
       this.newsletterForm.setValue({
         _id: this.data.newsletter._id,
-        establishmentName: this.data.newsletter.establishmentName,
-        establishmentCategory: this.data.newsletter.establishmentCategory,
+        category: this.data.newsletter.category,
         title: this.data.newsletter.title,
         message: this.data.newsletter.message,
       });

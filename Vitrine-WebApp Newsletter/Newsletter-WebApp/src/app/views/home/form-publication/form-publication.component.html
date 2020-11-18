@@ -1,19 +1,12 @@
 <h1 mat-dialog-title>Notícias</h1>
  
 <div>
-  <p>Preencha os dados abaixo com a nótícia que deseja enviar para seus clientes</p>
+  <p>Preencha o formulário abaixo com a nótícia que deseja enviar para nossos clientes</p>
 
   <form class="example-form" [formGroup]="newsletterForm" (ngSubmit)="onSubmit()">
     <mat-form-field class="example-full-width">
-      <mat-label>Anunciante</mat-label>
-      <input matInput formControlName="establishmentName" name="establishmentName" required #message maxlength="60"
-        placeholder="Ex. Padaria do Manoel">
-      <mat-hint align="start"><strong>Nos diga como você ou sua empresa são conhecidos</strong> </mat-hint>
-    </mat-form-field>
-
-    <mat-form-field class="example-full-width">
       <mat-label>Categoria</mat-label>
-      <input matInput formControlName="establishmentCategory" name="establishmentCategory" required #message maxlength="30"
+      <input matInput formControlName="category" name="category" required #message maxlength="30"
         placeholder="Ex. Alimento">
       <mat-hint align="start"><strong>Em qual categoria seu negócio se enquadra</strong> </mat-hint>
     </mat-form-field>
@@ -22,7 +15,7 @@
       <mat-label>Título da Notícia</mat-label>
       <input matInput formControlName="title" name="title" required #message maxlength="60"
         placeholder="Ex. Novos Produtos de Confeitaria">
-      <mat-hint align="start"><strong>Digite um título que chame a atenção dos seus clientes</strong> </mat-hint>
+      <mat-hint align="start"><strong>Digite um título que chame a atenção do seus clientes</strong> </mat-hint>
     </mat-form-field>
 
     <mat-form-field class="example-full-width">
