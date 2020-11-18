@@ -1,4 +1,4 @@
-# fiap-app-vitrine
+# App Vitrine
 
 Projeto acadêmico explorando tecnologias Mobile, WEB, Backend, Bancos de Dados Relacionais e Não Relacionais.
 
