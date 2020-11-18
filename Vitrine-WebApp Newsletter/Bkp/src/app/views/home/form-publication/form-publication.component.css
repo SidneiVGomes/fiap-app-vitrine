@@ -1,0 +1,19 @@
+.example-form {
+  min-width: 50px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.example-full-width {
+  width: 100%;
+  margin-top: 15px;
+}
+
+.text-area-noticia {
+  height: 200px;
+  display: inline-block;
+}
+
+.mat-dialog-button-publish {
+  background-color: #FCC37C;
+}

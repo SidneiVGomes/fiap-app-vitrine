@@ -1,0 +1,60 @@
+.home-toolbar {
+  background-color: #fcc37c;
+  height: 8%;
+
+  position: sticky;
+  position: -webkit-sticky; /* For macOS/iOS Safari */
+  top: 0; /* Sets the sticky toolbar to be on top */
+  z-index: 1000; /* Ensure that your app's content doesn't overlap the toolbar */
+}
+
+.home-toolbar-title {
+  color: #594a46;
+  display: flex;
+  align-items: center;
+}
+
+.home-toolbar-title img {
+  width: 10%;
+  height: 10%;
+  margin-right: 10px;
+}
+
+.home-toolbar-spacer {
+  flex: 1 1 auto;
+}
+
+.home-toolbar-button-row {
+  display: table-cell;
+  width: 50px;
+}
+
+::ng-deep .snackBar-custom-sucess {
+  background-color: #1f8f00;
+  color: white;
+}
+
+.home-toolbar-button{
+  width: 30px;
+  height: 30px;
+}
+
+.home-toolbar-button-icon{
+  width: 10px;
+  height: 10px;
+  margin-top: -25px;
+  margin-left: -12px;
+}
+
+.home-toolbar-username{
+  font-size: 0.6rem;
+  margin-top: -8px;
+  margin-bottom: 0;
+  margin-left: -10px;
+}
+
+.home-toolbar-button-group{
+  margin-top: 08px;
+  margin-bottom: 0px;
+}
+

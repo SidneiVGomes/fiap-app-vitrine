@@ -1,0 +1,33 @@
+<mat-card class="card">
+   <div class="card-header" fxLayout="column" fxLayoutAlign="space-between start">
+      <mat-card-title class="card-header-title">{{newsletterInitial.title}}</mat-card-title>
+      <mat-card-subtitle>
+         <span class="card-header-business">{{newsletterInitial.establishmentName}}</span><br>
+         <span class="card-header-category-label">Categoria:</span>
+         <span class="card-header-category">{{newsletterInitial.establishmentCategory}}</span>
+      </mat-card-subtitle>
+   </div>
+
+   <mat-card-content>
+      <p>{{newsletterInitial.message}}</p>
+   </mat-card-content>
+
+   <div class="card-footer" fxLayout="row" fxLayoutAlign="space-between end">
+      <div class="card-footer-button">
+         <button mat-button>LIKE</button>
+         <button mat-button>SHARE</button>
+      </div>
+
+      <div class="card-footer-button">
+         <button mat-button class="card-footer-button-crud" (click)="openFormEditNewsletter(newsletterInitial)">
+            <mat-icon class="example-icon" aria-hidden="false" aria-label="Example user verified icon">edit_outlined
+            </mat-icon>
+         </button>
+
+         <button mat-button class="card-footer-button-crud" (click)="deleteCard(newsletterInitial)">
+            <mat-icon class="example-icon" aria-hidden="false" aria-label="Example user verified icon">delete_outline
+            </mat-icon>
+         </button>
+      </div>
+   </div>
+</mat-card>

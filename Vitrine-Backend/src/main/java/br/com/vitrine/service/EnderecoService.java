@@ -1,0 +1,16 @@
+package br.com.vitrine.service;
+ 
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+import br.com.vitrine.model.Endereco;
+
+@Service
+public interface EnderecoService {
+	public Endereco gravar(Endereco obj);
+	public Endereco excluir(Long id);
+	public Endereco consultar(Endereco obj);
+	public Endereco consultarCEP(String CEP);
+	public List<Endereco> consultarTodos();
+}
