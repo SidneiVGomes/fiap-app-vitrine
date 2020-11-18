@@ -15,9 +15,9 @@ To run the server:
 - GET:    /newsletter      - Return all data from database.
           /newsletter/{id} - Return a specific newsletter from database using ID as parameter.
 
-- POST:   /newsletter      - Create a new newsletter. | body{ establishmentName: String, establishmentCategory: String, title: String, message: String }
+- POST:   /newsletter      - Create a new newsletter. | body{ category: String, title: String, message: String }
 
 - DELETE: /newsletter/{id} - Delete a specific newsletter from database using ID as parameter.
 
 - PUT:    /newsletter/{id} - Update a specific newsletter from database using ID as parameter and
-                             Query for body{ establishmentName: String, establishmentCategory: String, title: String, message: String }
+                             Query for body{ category: String, title: String, message: String }
